@@ -17,7 +17,7 @@ MyGame.Boot = function (game) {
 // 起動処理
 MyGame.Boot.prototype = {
     // 読み込み段階を作成(Interphase1より)
-    init: function() {
+    init: function() {//startよりも先の初期化（Loading画面）
         let box = this.make.graphics(0, 0);
         box.lineStyle(0, 0xff0000, 0.8);
         box.beginFill(0xff700b, 1);

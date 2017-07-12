@@ -1,5 +1,5 @@
 // インスタンス変数、関数の定義
-MyGame.Game = function (game) {
+MyGame.Game = function (game) {//最初の場所確保
     // Star
     this.star = null;
     // カーソルオブジェクト
@@ -77,7 +77,8 @@ MyGame.Game.prototype = {
 
         // Cキーでクリア
         if (this.input.keyboard.isDown(Phaser.KeyCode.C)) {
-            this.state.start("Clear", false);
+            this.state.start("Clear", false);//通常の呼び出しはシーンがすべて消える。
+            //, falseは前のシーンの描画を残す。→機能はシーンで切り替わっている
         }
 
         // Aキーで点数加算

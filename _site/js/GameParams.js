@@ -1,4 +1,4 @@
-MyGame.GameParams = function (game) {
+MyGame.GameParams = function (game) {//ゲーム全体の設定、スコアなどの更新は全てここ。
 
     // ゲームオブジェクト
     this.game = game;
@@ -14,7 +14,7 @@ MyGame.GameParams = function (game) {
         boundsAlignH: "left",
         boundsAlignV: "top"
     };
-    this.scoreText = this.add.text(5, 5, "", style);
+    this.scoreText = game.add.text(5, 5, "", style);
     this.scoreText.setShadow(1, 1, "rgba(255, 255, 255, 0.8)", 1);
 
     // 常に表示するために、Stageに追加
